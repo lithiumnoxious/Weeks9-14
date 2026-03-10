@@ -5,6 +5,9 @@ public class controllerinput : MonoBehaviour
 {
     public float speed = 5;
     public Vector2 movement;
+    public Vector3 rot;
+    public float rotSpeed = 100;
+    public float pointval;
     public AudioSource SFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +19,11 @@ public class controllerinput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //rot = transform.eulerAngles;
+        //rot.z = pointval;
+
         transform.position += (Vector3)movement *speed * Time.deltaTime;
+        transform.eulerAngles += (Vector3)rot * speed * Time.deltaTime;
         //transform.position = movement;
     }
 
@@ -37,5 +44,10 @@ public class controllerinput : MonoBehaviour
     {
         //Mouse.current.ReadValue()
         //movement = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+    }
+    public void onlook(InputAction.CallbackContext context)
+    {
+        //rot = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+        rot = context.ReadValue<Vector2>();
     }
 }
