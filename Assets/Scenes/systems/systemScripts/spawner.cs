@@ -1,7 +1,24 @@
+using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class spawner : MonoBehaviour
 {
+    public float time1 = 0;
+    public float time2 = 0;
+    public float timecap = 5;
+    public player P;
+
+    public GameObject E1;
+    public GameObject SpawnedE1;
+
+    public GameObject E2;
+    public GameObject SpawnedE2;
+
+    public List<GameObject> EList = new List<GameObject>();
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,6 +28,33 @@ public class spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (time1 >= timecap)
+        {
+            StartCoroutine(CloneE1());
+        }
+        if (time2 >= timecap*2.5)
+        {
+            StartCoroutine(CloneE2());
+        }
+        else
+        {
+            time1 += 1 * Time.deltaTime;
+            time2 += 1 * Time.deltaTime;
+        }
+    }
+    IEnumerator CloneE1()
+    {
+        SpawnedE1 = Instantiate(E1, new Vector2(Random.Range(-6f, 6f),Random.Range(-3.5f, -3.5f)), Quaternion.identity);
+        EList.Add(SpawnedE1);
+        time1 = 0;
+        yield return null;
+    }
+    IEnumerator CloneE2()
+    {
+        SpawnedE2 = Instantiate(E2, new Vector2(Random.Range(-6f, 6f), Random.Range(-3.5f, -3.5f)), Quaternion.identity);
+        EList.Add(SpawnedE2);
+        time2 = 0;
+        yield return null;
     }
 }

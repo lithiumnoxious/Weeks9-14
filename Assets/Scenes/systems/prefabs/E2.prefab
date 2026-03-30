@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380fae130c9a0ec4fb908ce0ac54b014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemyguns
-  P: {fileID: 0}
+  P: {fileID: 2427671539813718928, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
 --- !u!1001 &5213130754197060205
 PrefabInstance:
   m_ObjectHideFlags: 0
