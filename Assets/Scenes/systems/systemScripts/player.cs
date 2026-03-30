@@ -11,6 +11,10 @@ public class player : MonoBehaviour
     
     public SpriteRenderer sr;
 
+    public Vector2 rot;
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,5 +48,13 @@ public class player : MonoBehaviour
     public void steps()
     {
         step.Play();
+    }
+
+    public void onPoint(InputAction.CallbackContext context)
+    {
+        //Vector2 direction = (context.ReadValue<Vector2>()) - (Vector2)transform.position;
+        //transform.up = direction;
+
+        rot = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
     }
 }

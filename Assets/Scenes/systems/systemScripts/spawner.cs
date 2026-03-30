@@ -8,7 +8,6 @@ public class spawner : MonoBehaviour
     public float time1 = 0;
     public float time2 = 0;
     public float timecap = 5;
-    public player P;
 
     public GameObject E1;
     public GameObject SpawnedE1;
@@ -45,14 +44,14 @@ public class spawner : MonoBehaviour
     }
     IEnumerator CloneE1()
     {
-        SpawnedE1 = Instantiate(E1, new Vector2(Random.Range(-6f, 6f),Random.Range(-3.5f, -3.5f)), Quaternion.identity);
+        SpawnedE1 = Instantiate(E1, new Vector2(Random.Range(-6f, 6f),Random.Range(-3.5f, 3.5f)), Quaternion.identity);
         EList.Add(SpawnedE1);
         time1 = 0;
         yield return null;
     }
     IEnumerator CloneE2()
     {
-        SpawnedE2 = Instantiate(E2, new Vector2(Random.Range(-6f, 6f), Random.Range(-3.5f, -3.5f)), Quaternion.identity);
+        SpawnedE2 = Instantiate(E2, new Vector2(Random.Range(-6f, 6f), Random.Range(-3.5f, 3.5f)), Quaternion.identity);
         EList.Add(SpawnedE2);
         time2 = 0;
         yield return null;
