@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class player : MonoBehaviour
 {
     public Animator ani;
     public AudioSource step;
     public Vector2 movement;
-    public Vector3 rot;
-    public float speed = 5;
 
+    public float speed = 5;
+    
     public SpriteRenderer sr;
 
 
