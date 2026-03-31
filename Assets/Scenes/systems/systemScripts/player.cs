@@ -11,7 +11,7 @@ public class player : MonoBehaviour
     
     public SpriteRenderer sr;
 
-    public Vector2 rot;
+    public Vector2 MousePos;
 
 
 
@@ -30,6 +30,7 @@ public class player : MonoBehaviour
         {
             ani.SetBool("isWalking", false);
         }
+
     }
     public void onMove(InputAction.CallbackContext context)
     {
@@ -55,6 +56,6 @@ public class player : MonoBehaviour
         //Vector2 direction = (context.ReadValue<Vector2>()) - (Vector2)transform.position;
         //transform.up = direction;
 
-        rot = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+        MousePos = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
     }
 }

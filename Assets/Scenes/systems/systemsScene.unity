@@ -234,8 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457b586dbd5a86e45b780009a3ec93f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitscan
-  point: {fileID: 1902812062}
-  gun: {fileID: 491675427}
+  p: {fileID: 1902812062}
+  gun: {fileID: 797813795}
+  Transform: {x: 0, y: 0}
 --- !u!1 &336431569
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,22 +374,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &491675427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 845621522882337427, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
-  m_PrefabInstance: {fileID: 8011920097490867359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &706371061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5621638494730538706, guid: 63581614bf843a94dad1c89b0e321d6e, type: 3}
   m_PrefabInstance: {fileID: 2047684423188805131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &797813795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 314699671225008910, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
+  m_PrefabInstance: {fileID: 8011920097490867359}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1250020703 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7309350757294324890, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
   m_PrefabInstance: {fileID: 8011920097490867359}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 797813795}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc224b82ff5b261438db8c186a164f8e, type: 3}
@@ -549,7 +550,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1953590064450011456, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953590064450011456, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
       propertyPath: m_LocalPosition.y

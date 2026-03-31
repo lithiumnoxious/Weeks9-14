@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class hitscan : MonoBehaviour
 {
-    public player point;
-    public GameObject gun;
+    public player p;
+    public GameObject RotP;
+    public Vector2 Transform;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,7 +14,7 @@ public class hitscan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = point.rot;
-        gun.transform.up = point.rot;
+        transform.position = p.MousePos;
+        RotP.transform.up = p.MousePos - (Vector2)p.transform.position;
     }
 }
