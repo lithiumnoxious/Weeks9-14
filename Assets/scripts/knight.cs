@@ -34,7 +34,12 @@ public class knight : MonoBehaviour
         yield return null;
     }
 
-    IEnumerable attack()
+    public void attack()
+    {
+        
+    }
+
+    IEnumerable startattack()
     {
 
 
