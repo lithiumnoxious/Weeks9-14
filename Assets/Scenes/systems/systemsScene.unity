@@ -479,7 +479,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7502045278602749674, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
   m_PrefabInstance: {fileID: 8011920097490867359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1999029528
+--- !u!114 &1999029530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -897,7 +897,7 @@ PrefabInstance:
     - target: {fileID: 6809616836429168308, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1999029528}
+      objectReference: {fileID: 1999029530}
     - target: {fileID: 6809616836429168308, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
       propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -948,7 +948,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7502045278602749674, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1999029528}
+      addedObject: {fileID: 1999029530}
   m_SourcePrefab: {fileID: 100100000, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -42,5 +42,7 @@ public class bulletspawner : MonoBehaviour
         SpawnedBullet = Instantiate(Bullet, transform.position,transform.rotation);
         Bullets.Add(SpawnedBullet);
         yield return null;
+
+
     }
 }
