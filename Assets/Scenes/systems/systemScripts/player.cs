@@ -46,6 +46,7 @@ public class player : MonoBehaviour
             sr.flipX = false;
         }
     }
+
     public void steps()
     {
         step.Play();
