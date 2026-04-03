@@ -10,7 +10,6 @@ public class bulletspawner : MonoBehaviour
     public int CurrentAmmo;
 
     Coroutine Reload;
-    Coroutine Fire;
 
     public GameObject Bullet;
     public GameObject SpawnedBullet;
@@ -32,48 +31,42 @@ public class bulletspawner : MonoBehaviour
 
     public void onShoot(InputAction.CallbackContext context)
     {
-        
-        //Fire = StartCoroutine(fire());
 
-
-
-        if (context.performed && CurrentAmmo > 0)
+            if (context.performed && CurrentAmmo > 0)
+            {
+                StartCoroutine(fire());
+                CurrentAmmo -= 1;
+            }
+        else if (context.performed)
         {
-            StartCoroutine(fire());
-            CurrentAmmo -= 1;
+            Debug.Log("Out of ammo, Press E to reload.");
         }
 
+    }
+
+    public void onReload(InputAction.CallbackContext context)
+    {
         if (context.performed && CurrentAmmo <= 0)
         {
-
             StartCoroutine(reload());
         }
     }
 
     IEnumerator fire()
     {
-        
         SpawnedBullet = Instantiate(Bullet, transform.position, transform.rotation);
         Bullets.Add(SpawnedBullet);
         Debug.Log("Current " + CurrentAmmo);
         yield return null;
-
     }
     IEnumerator reload()
     {
         while (CurrentAmmo<MaxAmmo)
         {
-            //if (Reload != null)
-            //{
-            //    StopCoroutine(Fire);
-            //}
-
             CurrentAmmo += 1;
             
             Debug.Log("reloading " + CurrentAmmo);
             yield return new WaitForSecondsRealtime(1f);
-
-
         }
     }
 }
