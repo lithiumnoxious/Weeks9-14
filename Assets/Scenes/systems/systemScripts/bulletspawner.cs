@@ -30,8 +30,10 @@ public class bulletspawner : MonoBehaviour
     public void onShoot(InputAction.CallbackContext context)
     {
 
-        StartCoroutine(fire());
-
+        if (context.performed)
+        {
+            StartCoroutine(fire());
+        }
 
     }
 
