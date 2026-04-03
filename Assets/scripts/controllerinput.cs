@@ -40,11 +40,6 @@ public class controllerinput : MonoBehaviour
         }
     }
 
-    public void onPoint(InputAction.CallbackContext context)
-    {
-        //Mouse.current.ReadValue()
-        //movement = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
-    }
     public void onlook(InputAction.CallbackContext context)
     {
         //rot = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
