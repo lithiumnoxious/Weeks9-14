@@ -28,6 +28,9 @@ public class BULLET : MonoBehaviour
         {
             timer += 1 * Time.deltaTime;
         }
+
+        transform.position += transform.up * speed * Time.deltaTime;
+
     }
 
     IEnumerator lifetime()
