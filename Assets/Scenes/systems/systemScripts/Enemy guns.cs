@@ -14,7 +14,7 @@ public class Enemyguns : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = (Vector2)P.transform.position - (Vector2)transform.position;
+        Vector2 direction = P.transform.position - transform.position;
         transform.right = direction;
 
     }

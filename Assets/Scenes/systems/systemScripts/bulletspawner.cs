@@ -6,9 +6,9 @@ using UnityEngine.Rendering;
 
 public class bulletspawner : MonoBehaviour
 {
-    public int MaxAmmo;
-    public int CurrentAmmo;
-
+    public int MaxAmmo =10;
+    public int CurrentAmmo = 10;
+    
     Coroutine Reload;
 
     public SpriteRenderer bsr;
