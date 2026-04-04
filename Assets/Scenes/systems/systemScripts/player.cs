@@ -14,8 +14,6 @@ public class player : MonoBehaviour
 
     public Vector2 MousePos;
 
-    public UnityEvent<float> UpdatePHp;
-
     public float MaxPHp = 100;
     public float PHp = 100;
     public bool ishot = false;
@@ -73,7 +71,6 @@ public class player : MonoBehaviour
         if (isdead) return;
 
         PHp -= damage;
-        UpdatePHp.Invoke(PHp);
         Debug.Log("Current " + PHp);
         //ani.SetTrigger("hurt");
 
@@ -87,7 +84,6 @@ public class player : MonoBehaviour
     {
         PHp = 0;
         isdead = true;
-        UpdatePHp.Invoke(PHp);
 
     }
     public void Continue(InputAction.CallbackContext context)
@@ -95,7 +91,6 @@ public class player : MonoBehaviour
         if (context.performed && isdead)
         {
             PHp = MaxPHp;
-            UpdatePHp.Invoke(PHp);
             isdead = false;
             ishot = false;
         }
