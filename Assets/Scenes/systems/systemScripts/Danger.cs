@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Danger : MonoBehaviour
 {
-
+    public player p;
     public SpriteRenderer bulletE;
     public SpriteRenderer lazerE;
     public bool isindanger = false;
@@ -19,13 +19,13 @@ public class Danger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (bulletE.bounds.Contains(transform.position) || lazerE.bounds.Contains(transform.position))
+            if (bulletE.bounds.Contains(p.transform.position) || lazerE.bounds.Contains(p.transform.position))
             {
                 if (isindanger == true)
                 {
                 //still in the hazard
                 Debug.Log("hazard");
-
+                
             }
             else
                 {

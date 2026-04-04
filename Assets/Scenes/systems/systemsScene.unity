@@ -790,7 +790,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6628980051739362571, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 8371212253269530080}
   m_SourcePrefab: {fileID: 100100000, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
 --- !u!114 &8371212253269530080
@@ -800,11 +800,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745829288430096430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42883edd2417994db07476d4ec61ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Danger
+  p: {fileID: 5656763600097611535}
   bulletE: {fileID: 7270287898067346676, guid: 8ca528b2663079044b03375bb24ae0c1, type: 3}
   lazerE: {fileID: 3985916906115853509, guid: 90c31c652c4dc9843bb280eaa2cc5721, type: 3}
   isindanger: 0
