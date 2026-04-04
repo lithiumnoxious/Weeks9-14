@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 public class Enemyguns : MonoBehaviour
 {
@@ -8,11 +11,11 @@ public class Enemyguns : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
         Vector2 direction = (Vector2)P.transform.position - (Vector2)transform.position;
         transform.right = direction;
+
     }
 }

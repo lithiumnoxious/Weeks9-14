@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class spawner : MonoBehaviour
@@ -17,6 +18,8 @@ public class spawner : MonoBehaviour
 
     //list of both enemy types combined
     public List<GameObject> EList = new List<GameObject>();
+
+    public bulletspawner bs;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,6 +46,15 @@ public class spawner : MonoBehaviour
             time1 += 1 * Time.deltaTime;
             time2 += 1 * Time.deltaTime;
         }
+
+        if (bs.bsr.bounds.Contains(transform.position))
+        {
+             Debug.Log("hit");
+             StartCoroutine(isShot());
+        }
+
+
+
     }
     //spawning the different enemies
     IEnumerator CloneE1()
@@ -57,6 +69,13 @@ public class spawner : MonoBehaviour
         SpawnedE2 = Instantiate(E2, new Vector2(Random.Range(-6f, 6f), Random.Range(-3.5f, 3.5f)), Quaternion.identity);
         EList.Add(SpawnedE2);
         time2 = 0;
+        yield return null;
+    }
+    IEnumerator isShot()
+    {
+
+
+        Debug.Log("hit");
         yield return null;
     }
 }

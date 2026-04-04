@@ -11,8 +11,10 @@ public class bulletspawner : MonoBehaviour
 
     Coroutine Reload;
 
+    public SpriteRenderer bsr;
     public GameObject Bullet;
     public GameObject SpawnedBullet;
+    
 
     public List<GameObject> Bullets = new List<GameObject>();
 
