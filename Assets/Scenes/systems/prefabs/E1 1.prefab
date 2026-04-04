@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fc69b2a96eb3848a695f15d4cef357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::shotgun
-  bs: {fileID: 0}
+  bsr: {fileID: 7270287898067346676, guid: 8ca528b2663079044b03375bb24ae0c1, type: 3}
+  Buck: {fileID: 7270287898067346679, guid: 8ca528b2663079044b03375bb24ae0c1, type: 3}
+  SpawnedBuck: {fileID: 0}
+  Bucks: []
   timer: 0
   timecap: 5
   MaxBuck: 5
@@ -93,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380fae130c9a0ec4fb908ce0ac54b014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemyguns
-  P: {fileID: 0}
+  P: {fileID: 2427671539813718928, guid: 9ae2d7e17c32a91438307b978cd5b973, type: 3}
 --- !u!1 &4610885216900583191
 GameObject:
   m_ObjectHideFlags: 0

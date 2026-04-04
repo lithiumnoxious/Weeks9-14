@@ -1,9 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class shotgun : MonoBehaviour
 {
-    public bulletspawner bs;
+    public SpriteRenderer bsr;
+    public GameObject Buck;
+    public GameObject SpawnedBuck;
+
+
+    public List<GameObject> Bucks = new List<GameObject>();
+
     public float timer;
     public float timecap;
 
@@ -40,8 +47,8 @@ public class shotgun : MonoBehaviour
             //Quaterion identity is used to make sure the bullet is going up
             //added random range for the shotgun spread.
 
-            bs.SpawnedBullet = Instantiate(bs.Bullet, transform.position, transform.rotation * Quaternion.Euler(0, 0, -90 + randomZ));
-            bs.Bullets.Add(bs.SpawnedBullet);
+            SpawnedBuck = Instantiate(Buck, transform.position, transform.rotation * Quaternion.Euler(0, 0, -90 + randomZ));
+            Bucks.Add(SpawnedBuck);
             
             yield return new WaitForSeconds(0.05f);
         }
