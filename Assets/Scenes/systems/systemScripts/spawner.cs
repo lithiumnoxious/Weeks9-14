@@ -15,6 +15,7 @@ public class spawner : MonoBehaviour
     public GameObject E2;
     public GameObject SpawnedE2;
 
+    //list of both enemy types combined
     public List<GameObject> EList = new List<GameObject>();
 
 
@@ -27,7 +28,8 @@ public class spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //timer on when they spawn
+        //they have different values
         if (time1 >= timecap)
         {
             StartCoroutine(CloneE1());
@@ -42,6 +44,7 @@ public class spawner : MonoBehaviour
             time2 += 1 * Time.deltaTime;
         }
     }
+    //spawning the different enemies
     IEnumerator CloneE1()
     {
         SpawnedE1 = Instantiate(E1, new Vector2(Random.Range(-6f, 6f),Random.Range(-3.5f, 3.5f)), Quaternion.identity);

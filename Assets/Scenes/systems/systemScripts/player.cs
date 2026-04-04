@@ -13,9 +13,6 @@ public class player : MonoBehaviour
 
     public Vector2 MousePos;
 
-
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +22,9 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //movement
         transform.position += (Vector3)movement * speed * Time.deltaTime;
+        //switches between standing and walking animation
         if ((movement.x == 0 ) && (movement.y == 0))
         {
             ani.SetBool("isWalking", false);
@@ -36,6 +35,7 @@ public class player : MonoBehaviour
     {
         movement = context.ReadValue<Vector2>();
 
+        //changes depending on which side the player is facing
         ani.SetBool("isWalking", true);
         if (movement.x < 0)
         {
@@ -51,12 +51,8 @@ public class player : MonoBehaviour
     {
         step.Play();
     }
-
     public void onPoint(InputAction.CallbackContext context)
     {
-        //Vector2 direction = (context.ReadValue<Vector2>()) - (Vector2)transform.position;
-        //transform.up = direction;
-
         MousePos = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
     }
 }

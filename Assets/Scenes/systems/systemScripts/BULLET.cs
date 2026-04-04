@@ -4,8 +4,6 @@ using UnityEngine;
 public class BULLET : MonoBehaviour
 {
     public float speed;
-    //public bulletspawner bull;
-
     public float timer;
     public float timecap;
 
@@ -19,7 +17,7 @@ public class BULLET : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //timer before the bullet expires
         if (timer >= timecap)
         {
             StartCoroutine(lifetime());
@@ -28,7 +26,7 @@ public class BULLET : MonoBehaviour
         {
             timer += 1 * Time.deltaTime;
         }
-
+        //moves the bullet
         transform.position += transform.up * speed * Time.deltaTime;
 
     }
@@ -36,11 +34,6 @@ public class BULLET : MonoBehaviour
     IEnumerator lifetime()
     {
         Destroy(gameObject);
-        //bull.Bullets.Add(gameObject);
-
-        timer = 0;
         yield return null;
-
-
     }
 }

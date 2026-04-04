@@ -4,6 +4,8 @@ using static UnityEngine.Rendering.DebugUI.Table;
 
 public class guns : MonoBehaviour
 {
+
+    //gun is unused but its the first version of player.onpoint
     public Vector2 movement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
