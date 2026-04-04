@@ -6,9 +6,12 @@ using UnityEngine.Rendering;
 
 public class bulletspawner : MonoBehaviour
 {
+
+    public player p;
     public int MaxAmmo =10;
     public int CurrentAmmo = 10;
-    
+    public float Reloadspeed = 1;
+
     Coroutine Reload;
 
     public SpriteRenderer bsr;
@@ -34,7 +37,7 @@ public class bulletspawner : MonoBehaviour
     public void onShoot(InputAction.CallbackContext context)
     {
         //when mousepressed the gun fires but only if ammo is above 1
-        if (context.performed && CurrentAmmo > 0)
+        if (context.performed && CurrentAmmo > 0 && !p.ishot)
         {
         //this part spawns the bullet and lowers a bullet
             StartCoroutine(fire());
@@ -79,7 +82,7 @@ public class bulletspawner : MonoBehaviour
             CurrentAmmo += 1;
             Debug.Log("Reloading " + CurrentAmmo);
             //gives more time between reload.
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(Reloadspeed);
         }
         Debug.Log("Reloading Done");
         yield return null;

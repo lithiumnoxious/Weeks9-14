@@ -7,8 +7,6 @@ public class lazer : MonoBehaviour
     public float Currentlength;
     public float Maxlength;
 
-
-
     public float timer;
     public float timecap;
 
@@ -25,7 +23,6 @@ public class lazer : MonoBehaviour
         if (timer >= timecap)
         {
             StartCoroutine(ignite());
-
         }
         else
         {
@@ -42,18 +39,10 @@ public class lazer : MonoBehaviour
             beamtrans.localScale += new Vector3(0,Currentlength,0);
             yield return new WaitForSeconds(0.05f);
         }
+        //resets the object to its original postition
+        //its like this because only the Y value actually changes
         beamtrans.localScale = new Vector3(1,0,1);
-        
        
         yield return null;
     }
-
-    IEnumerator retract()
-    {
-
-
-        yield return null;
-    }
-
-
 }
