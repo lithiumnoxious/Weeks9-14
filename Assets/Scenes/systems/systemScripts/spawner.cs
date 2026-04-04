@@ -50,7 +50,7 @@ public class spawner : MonoBehaviour
         if (bs.bsr.bounds.Contains(transform.position))
         {
              Debug.Log("hit");
-             StartCoroutine(isShot());
+             StartCoroutine(iskilled());
         }
 
 
@@ -71,9 +71,9 @@ public class spawner : MonoBehaviour
         time2 = 0;
         yield return null;
     }
-    IEnumerator isShot()
+    IEnumerator iskilled()
     {
-
+        
 
         Debug.Log("hit");
         yield return null;

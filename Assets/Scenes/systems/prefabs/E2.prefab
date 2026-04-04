@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::lazer
   beamtrans: {fileID: 8875413309250422372}
+  sr: {fileID: 3985916906115853509, guid: 90c31c652c4dc9843bb280eaa2cc5721, type: 3}
   Currentlength: 0
   Maxlength: 0.6
   timer: 4

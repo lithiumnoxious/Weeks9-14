@@ -4,6 +4,7 @@ using UnityEngine;
 public class lazer : MonoBehaviour
 {
     public Transform beamtrans;
+    public SpriteRenderer sr;
     public float Currentlength;
     public float Maxlength;
 

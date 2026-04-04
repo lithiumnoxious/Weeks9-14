@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class player : MonoBehaviour
@@ -13,8 +14,12 @@ public class player : MonoBehaviour
 
     public Vector2 MousePos;
 
+    public UnityEvent<float> UpdatePHp;
+
+    public float MaxPHp = 100;
     public float PHp = 100;
     public bool ishot = false;
+    public bool isdead = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,6 +67,39 @@ public class player : MonoBehaviour
         MousePos = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
     }
 
+    public void hurt(float damage)
+    {
+        //are they already dead
+        if (isdead) return;
 
+        PHp -= damage;
+        UpdatePHp.Invoke(PHp);
+        Debug.Log("Current " + PHp);
+        //ani.SetTrigger("hurt");
+
+        //do they die
+        if (!isdead && PHp <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        PHp = 0;
+        isdead = true;
+        UpdatePHp.Invoke(PHp);
+
+    }
+    public void Continue(InputAction.CallbackContext context)
+    {
+        if (context.performed && isdead)
+        {
+            PHp = MaxPHp;
+            UpdatePHp.Invoke(PHp);
+            isdead = false;
+            ishot = false;
+        }
+        
+    }
 
 }
