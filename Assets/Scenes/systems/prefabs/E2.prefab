@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380fae130c9a0ec4fb908ce0ac54b014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemyguns
-  P: {fileID: 3293797457803357908, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
+  Ppos: {fileID: 0}
 --- !u!1001 &3113010993614845424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,7 +206,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4980319475016159502, guid: 90c31c652c4dc9843bb280eaa2cc5721, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6789862961723903395, guid: 90c31c652c4dc9843bb280eaa2cc5721, type: 3}
     m_AddedGameObjects: []
@@ -238,6 +239,22 @@ MonoBehaviour:
   Maxlength: 0.6
   timer: 4
   timecap: 10
+  P: {fileID: 0}
+  entereddanger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &8875413309250422372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5771484281690469268, guid: 90c31c652c4dc9843bb280eaa2cc5721, type: 3}

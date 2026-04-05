@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class lazer : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class lazer : MonoBehaviour
     public float timer;
     public float timecap;
 
+    public player P;
+
+    public UnityEvent entereddanger;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +32,15 @@ public class lazer : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
+        }
+
+        Bounds hitbox = GetComponent<SpriteRenderer>().bounds;
+        if (hitbox.Contains(P.transform.position))
+        {
+            //StartCoroutine(hit());
+
+            Debug.Log("lazer Hitting player!");
+;
         }
     }
     IEnumerator ignite()

@@ -308,24 +308,7 @@ MonoBehaviour:
   PHp: 100
   ishot: 0
   isdead: 0
-  bulletE: {fileID: 7270287898067346679, guid: 8ca528b2663079044b03375bb24ae0c1, type: 3}
-  hitDistance: 1.5
-  entereddanger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3293797457803357908}
-        m_TargetAssemblyTypeName: player, Assembly-CSharp
-        m_MethodName: hurt
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  dist: 0
+  recovery: 10
 --- !u!95 &5169321559212195206
 Animator:
   serializedVersion: 7

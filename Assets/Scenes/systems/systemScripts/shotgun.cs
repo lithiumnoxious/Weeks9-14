@@ -35,6 +35,7 @@ public class shotgun : MonoBehaviour
         {
             timer += 1 * Time.deltaTime;
         }
+
     }
 
     IEnumerator shoot()
@@ -55,9 +56,6 @@ public class shotgun : MonoBehaviour
                 hb.p = P;
             }
             Bucks.Add(SpawnedBuck);
-            
-
-
             yield return new WaitForSeconds(0.05f);
         }
         

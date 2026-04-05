@@ -10,7 +10,7 @@ public class player : MonoBehaviour
     public Vector2 movement;
 
     public float speed = 5;
-    
+
     public SpriteRenderer sr;
 
     public Vector2 MousePos;
@@ -19,18 +19,15 @@ public class player : MonoBehaviour
     public float PHp = 100;
     public bool ishot = false;
     public bool isdead = false;
-
-
-    //public GameObject bulletE;
-
-    //public float hitDistance = 1.5f;
-    //public UnityEvent entereddanger;
-    //public shotgun sg;
+    public float recovery = 10;
+    public float c = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+
+        PHp = MaxPHp;
     }
 
     // Update is called once per frame
@@ -43,41 +40,13 @@ public class player : MonoBehaviour
             transform.position += (Vector3)movement * speed * Time.deltaTime;
             //cope = transform;
         }
-        else
-        {
-            transform.position = Vector2.zero;
-        }
-
 
         //switches between standing and walking animation
-        if ((movement.x == 0 ) && (movement.y == 0))
+        if ((movement.x == 0) && (movement.y == 0))
         {
             ani.SetBool("isWalking", false);
         }
 
-
-
-        //for (int i = sg.Bucks.Count - 1; i >= 0; i--)
-        //{
-        //    GameObject Buck = sg.Bucks[i];
-        //    if (Buck != null)
-        //    {
-        //        float dist = Vector3.Distance(transform.position, Buck.transform.position);
-
-        //        if (dist <= hitDistance)
-        //        {
-        //            Debug.Log("Hitting player!");
-        //            Destroy(Buck);
-        //            sg.Bucks.RemoveAt(i);
-        //            entereddanger.Invoke();
-
-        //            //    //Destroy(gameObject);
-        //            //}
-
-
-        //        }
-        //    }
-        //}
     }
     public void onMove(InputAction.CallbackContext context)
     {
@@ -106,12 +75,8 @@ public class player : MonoBehaviour
     {
         //are they already dead
         if (isdead) return;
-
         PHp -= damage;
         Debug.Log("Current " + PHp);
-        //ani.SetTrigger("hurt");
-
-        StartCoroutine(stagger());
         //do they die
         if (!isdead && PHp <= 0)
         {
@@ -122,28 +87,20 @@ public class player : MonoBehaviour
     {
         PHp = 0;
         isdead = true;
-
     }
-    public void Continue(InputAction.CallbackContext context)
+
+    public void Beamed()
     {
-        if (context.performed && isdead)
-        {
-            PHp = MaxPHp;
-            isdead = false;
-            ishot = false;
-        }
-        
+        StartCoroutine(stagger());
     }
 
     IEnumerator stagger()
     {
-        ishot = true;
-        StartCoroutine(stag());
-        yield return null;
-    }
-    IEnumerator stag()
-    {
+        for (int i = 0; i < recovery; i++)
+        {
+            ishot = true;
+        }
         ishot = false;
-        yield return null;
+        yield return new WaitForSeconds(0.05f);
     }
 }

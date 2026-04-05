@@ -80,7 +80,11 @@ public class spawner : MonoBehaviour
         {
             rot.Ppos = Player;
         }
-        
+        lazer l = SpawnedE2.GetComponentInChildren<lazer>();
+        if (l != null)
+        {
+            l.P = Player;
+        }
 
         EList.Add(SpawnedE2);
         time2 = 0;

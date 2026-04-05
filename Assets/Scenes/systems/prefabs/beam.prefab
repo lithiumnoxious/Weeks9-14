@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5771484281690469268}
   - component: {fileID: 3985916906115853509}
+  - component: {fileID: 4980319475016159502}
   m_Layer: 0
   m_Name: beam
   m_TagString: Untagged
@@ -92,6 +93,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4980319475016159502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275299057279817777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e41fbf6baf1ad4299bddcd8720da43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::hitbox
+  p: {fileID: 0}
+  hitDistance: 1.5
+  entereddanger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 275299057279817777}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6789862961723903395
 GameObject:
   m_ObjectHideFlags: 0

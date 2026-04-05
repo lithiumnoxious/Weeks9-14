@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,8 @@ public class hitbox : MonoBehaviour
     public player p;
 
     public float hitDistance = 1.5f;
+
+    
     public UnityEvent entereddanger;
 
     
@@ -22,12 +25,9 @@ public class hitbox : MonoBehaviour
         //float dist = Vector2.Distance(transform.position, p.transform.position);
         Bounds hitbox = GetComponent<SpriteRenderer>().bounds;
         if (hitbox.Contains(p.transform.position))
-        {
+        {   
             Debug.Log("Hitting player!");
-            entereddanger.Invoke();
-
+            p.hurt(5);
             Destroy(gameObject);
         }
     }
-
-}
