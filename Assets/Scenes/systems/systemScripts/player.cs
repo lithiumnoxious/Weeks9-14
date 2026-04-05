@@ -1,5 +1,5 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class player : MonoBehaviour
@@ -19,6 +19,12 @@ public class player : MonoBehaviour
     public bool ishot = false;
     public bool isdead = false;
 
+
+    //public GameObject bulletE
+
+    //public float hitDistance = 1.5f;
+    //public UnityEvent entereddanger;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +39,7 @@ public class player : MonoBehaviour
         {
             //movement
             transform.position += (Vector3)movement * speed * Time.deltaTime;
+            //cope = transform;
         }
 
 
@@ -41,6 +48,23 @@ public class player : MonoBehaviour
         {
             ani.SetBool("isWalking", false);
         }
+
+
+
+
+        //float dist = Vector3.Distance(transform.position, bulletE.transform.position);
+
+        //if (dist < hitDistance)
+        //{
+        //    Debug.Log("Hitting player!");
+        //    entereddanger.Invoke();
+
+        //    //Destroy(gameObject);
+        //}
+
+
+
+
     }
     public void onMove(InputAction.CallbackContext context)
     {
@@ -74,6 +98,7 @@ public class player : MonoBehaviour
         Debug.Log("Current " + PHp);
         //ani.SetTrigger("hurt");
 
+        StartCoroutine(stagger());
         //do they die
         if (!isdead && PHp <= 0)
         {
@@ -97,4 +122,15 @@ public class player : MonoBehaviour
         
     }
 
+    IEnumerator stagger()
+    {
+        ishot = true;
+        StartCoroutine(stag());
+        yield return new WaitForSecondsRealtime(1);
+    }
+    IEnumerator stag()
+    {
+        ishot = false;
+        yield return null;
+    }
 }

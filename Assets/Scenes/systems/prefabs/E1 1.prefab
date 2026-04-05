@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380fae130c9a0ec4fb908ce0ac54b014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemyguns
-  P: {fileID: 3293797457803357908, guid: dcff3bba4a676b945bc812b83f899df6, type: 3}
+  P: {fileID: 3293797457803357908, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
 --- !u!1 &4610885216900583191
 GameObject:
   m_ObjectHideFlags: 0

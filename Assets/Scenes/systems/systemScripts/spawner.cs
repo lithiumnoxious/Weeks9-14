@@ -19,7 +19,7 @@ public class spawner : MonoBehaviour
     //list of both enemy types combined
     public List<GameObject> EList = new List<GameObject>();
 
-    public bulletspawner bs;
+    //public bulletspawner bs;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,11 +47,11 @@ public class spawner : MonoBehaviour
             time2 += 1 * Time.deltaTime;
         }
 
-        if (bs.bsr.bounds.Contains(transform.position))
-        {
-             Debug.Log("hit");
-             StartCoroutine(iskilled());
-        }
+        //if (bs.bsr.bounds.Contains(transform.position))
+        //{
+        //     Debug.Log("hit");
+        //     StartCoroutine(iskilled());
+        //}
 
 
 

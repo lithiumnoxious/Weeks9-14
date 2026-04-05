@@ -18,10 +18,10 @@ public class hitbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        float dist = Vector3.Distance(transform.position, p.transform.position);
-
-        if (dist < hitDistance)
+        Vector2 direction = p.transform.position - transform.position;
+        //float dist = Vector2.Distance(transform.position, p.transform.position);
+        Bounds hitbox = GetComponent<SpriteRenderer>().bounds;
+        if (hitbox.Contains(direction ))
         {
             Debug.Log("Hitting player!");
             entereddanger.Invoke();

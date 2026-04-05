@@ -30,7 +30,6 @@ public class BULLET : MonoBehaviour
         transform.position += transform.up * speed * Time.deltaTime;
 
     }
-
     IEnumerator lifetime()
     {
         Destroy(gameObject);

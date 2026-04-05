@@ -120,12 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e41fbf6baf1ad4299bddcd8720da43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitbox
-  p: {fileID: 7596587518203326965, guid: dcff3bba4a676b945bc812b83f899df6, type: 3}
-  hitDistance: 1.5
+  p: {fileID: 7596587518203326965, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
+  hitDistance: 1
   entereddanger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2244962446719293994, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
+      - m_Target: {fileID: 3293797457803357908, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
         m_TargetAssemblyTypeName: player, Assembly-CSharp
         m_MethodName: hurt
         m_Mode: 4

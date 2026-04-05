@@ -201,12 +201,11 @@ GameObject:
   - component: {fileID: 1664558217799054340}
   - component: {fileID: 57391383548638521}
   - component: {fileID: 3293797457803357908}
-  - component: {fileID: 3937488151321948760}
   - component: {fileID: 5169321559212195206}
   - component: {fileID: 5946342905524849648}
   - component: {fileID: 714846377870336684}
   m_Layer: 0
-  m_Name: Pl 2
+  m_Name: Pl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,38 +307,7 @@ MonoBehaviour:
   MaxPHp: 100
   PHp: 100
   ishot: 0
-  isdead: 1
---- !u!114 &3937488151321948760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596587518203326965}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42883edd2417994db07476d4ec61ba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Danger
-  p: {fileID: 3293797457803357908}
-  bulletE: {fileID: 7270287898067346676, guid: 8ca528b2663079044b03375bb24ae0c1, type: 3}
-  lazerE: {fileID: 3985916906115853509, guid: 90c31c652c4dc9843bb280eaa2cc5721, type: 3}
-  isindanger: 0
-  entereddanger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3293797457803357908}
-        m_TargetAssemblyTypeName: player, Assembly-CSharp
-        m_MethodName: hurt
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 20
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isdead: 0
 --- !u!95 &5169321559212195206
 Animator:
   serializedVersion: 7
