@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class hitbox : MonoBehaviour
 {
-    public GameObject p;
+    public player p;
 
     public float hitDistance = 1.5f;
     public UnityEvent entereddanger;

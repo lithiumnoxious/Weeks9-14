@@ -16,6 +16,7 @@ public class shotgun : MonoBehaviour
 
     public float MaxBuck;
 
+    public player P;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,8 +49,15 @@ public class shotgun : MonoBehaviour
             //added random range for the shotgun spread.
 
             SpawnedBuck = Instantiate(Buck, transform.position, transform.rotation * Quaternion.Euler(0, 0, -90 + randomZ));
+            hitbox hb = SpawnedBuck.GetComponentInChildren<hitbox>();
+            if (hb != null)
+            {
+                hb.p = P;
+            }
             Bucks.Add(SpawnedBuck);
             
+
+
             yield return new WaitForSeconds(0.05f);
         }
         

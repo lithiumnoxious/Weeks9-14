@@ -170,7 +170,12 @@ MonoBehaviour:
   SpawnedE1: {fileID: 0}
   E2: {fileID: 6016630074928625054, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
   SpawnedE2: {fileID: 0}
+  Player: {fileID: 1454272366}
   EList: []
+  hitDistance: 1.5
+  entereddanger:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &53980608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8875413309250422372, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
@@ -625,6 +630,10 @@ PrefabInstance:
       propertyPath: P
       value: 
       objectReference: {fileID: 1454272366}
+    - target: {fileID: 4018323644799289378, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
+      propertyPath: Ppos
+      value: 
+      objectReference: {fileID: 1454272366}
     - target: {fileID: 6016630074928625054, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
       propertyPath: m_Name
       value: E2
@@ -656,6 +665,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1602998356618958310, guid: 63581614bf843a94dad1c89b0e321d6e, type: 3}
       propertyPath: P
+      value: 
+      objectReference: {fileID: 1454272366}
+    - target: {fileID: 1602998356618958310, guid: 63581614bf843a94dad1c89b0e321d6e, type: 3}
+      propertyPath: Ppos
       value: 
       objectReference: {fileID: 1454272366}
     - target: {fileID: 1754746614227256300, guid: 63581614bf843a94dad1c89b0e321d6e, type: 3}
@@ -706,6 +719,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6946445883225086949, guid: 63581614bf843a94dad1c89b0e321d6e, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1454272366}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

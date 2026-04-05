@@ -5,7 +5,7 @@ using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 public class Enemyguns : MonoBehaviour
 {
-    public player P;
+    public player Ppos;
     //public spawner S;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,7 @@ public class Enemyguns : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = P.transform.position - transform.position;
+        Vector2 direction = Ppos.transform.position - transform.position;
         transform.right = direction;
 
     }

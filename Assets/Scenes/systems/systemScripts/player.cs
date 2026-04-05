@@ -21,11 +21,11 @@ public class player : MonoBehaviour
     public bool isdead = false;
 
 
-    public GameObject bulletE;
+    //public GameObject bulletE;
 
-    public float hitDistance = 1.5f;
-    public UnityEvent entereddanger;
-    public shotgun sg;
+    //public float hitDistance = 1.5f;
+    //public UnityEvent entereddanger;
+    //public shotgun sg;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,27 +57,27 @@ public class player : MonoBehaviour
 
 
 
-        for (int i = sg.Bucks.Count - 1; i >= 0; i--)
-        {
-            GameObject Buck = sg.Bucks[i];
-            if (Buck != null)
-            {
-                float dist = Vector3.Distance(transform.position, Buck.transform.position);
+        //for (int i = sg.Bucks.Count - 1; i >= 0; i--)
+        //{
+        //    GameObject Buck = sg.Bucks[i];
+        //    if (Buck != null)
+        //    {
+        //        float dist = Vector3.Distance(transform.position, Buck.transform.position);
 
-                if (dist <= hitDistance)
-                {
-                    Debug.Log("Hitting player!");
-                    Destroy(Buck);
-                    sg.Bucks.RemoveAt(i);
-                    entereddanger.Invoke();
+        //        if (dist <= hitDistance)
+        //        {
+        //            Debug.Log("Hitting player!");
+        //            Destroy(Buck);
+        //            sg.Bucks.RemoveAt(i);
+        //            entereddanger.Invoke();
 
-                    //    //Destroy(gameObject);
-                    //}
+        //            //    //Destroy(gameObject);
+        //            //}
 
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
     public void onMove(InputAction.CallbackContext context)
     {

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class spawner : MonoBehaviour
 {
@@ -16,10 +17,13 @@ public class spawner : MonoBehaviour
     public GameObject E2;
     public GameObject SpawnedE2;
 
+    public player Player;
+
     //list of both enemy types combined
     public List<GameObject> EList = new List<GameObject>();
 
-    //public bulletspawner bs;
+    public float hitDistance = 1.5f;
+    public UnityEvent entereddanger;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,26 +51,37 @@ public class spawner : MonoBehaviour
             time2 += 1 * Time.deltaTime;
         }
 
-        //if (bs.bsr.bounds.Contains(transform.position))
-        //{
-        //     Debug.Log("hit");
-        //     StartCoroutine(iskilled());
-        //}
-
-
-
     }
     //spawning the different enemies
     IEnumerator CloneE1()
     {
         SpawnedE1 = Instantiate(E1, new Vector2(Random.Range(-6f, 6f),Random.Range(-3.5f, 3.5f)), Quaternion.identity);
+        Enemyguns rot = SpawnedE1.GetComponentInChildren<Enemyguns>();
+        if (rot != null)
+        {
+            rot.Ppos = Player;
+        }
+        shotgun gun = SpawnedE1.GetComponentInChildren<shotgun>();
+        if (gun != null)
+        {
+            gun.P = Player;
+        }
+
         EList.Add(SpawnedE1);
         time1 = 0;
+        
         yield return null;
     }
     IEnumerator CloneE2()
     {
         SpawnedE2 = Instantiate(E2, new Vector2(Random.Range(-6f, 6f), Random.Range(-3.5f, 3.5f)), Quaternion.identity);
+        Enemyguns rot = SpawnedE2.GetComponentInChildren<Enemyguns>();
+        if (rot != null)
+        {
+            rot.Ppos = Player;
+        }
+        
+
         EList.Add(SpawnedE2);
         time2 = 0;
         yield return null;
