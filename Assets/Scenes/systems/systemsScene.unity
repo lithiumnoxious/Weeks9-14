@@ -176,11 +176,6 @@ MonoBehaviour:
   entereddanger:
     m_PersistentCalls:
       m_Calls: []
---- !u!4 &53980608 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8875413309250422372, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-  m_PrefabInstance: {fileID: 1218269766224495207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &182668670
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,21 +570,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1454272366}
     - target: {fileID: 2032867742421423803, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: timer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032867742421423803, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: timecap
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032867742421423803, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
       propertyPath: Maxlength
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2032867742421423803, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: beamtrans
-      value: 
-      objectReference: {fileID: 53980608}
     - target: {fileID: 2917149878064138441, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.14
@@ -631,28 +614,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4018323644799289378, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: P
-      value: 
-      objectReference: {fileID: 1454272366}
-    - target: {fileID: 4018323644799289378, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
       propertyPath: Ppos
       value: 
       objectReference: {fileID: 1454272366}
     - target: {fileID: 6016630074928625054, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
       propertyPath: m_Name
       value: E2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016630074928625054, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296363635082565641, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: m_Name
-      value: spawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355812389922865583, guid: ad39d36f8991c0146a8b3460843f7aaa, type: 3}
-      propertyPath: m_Name
-      value: RotE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

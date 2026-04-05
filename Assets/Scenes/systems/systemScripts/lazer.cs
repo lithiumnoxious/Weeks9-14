@@ -14,8 +14,6 @@ public class lazer : MonoBehaviour
 
     public player P;
 
-    public UnityEvent entereddanger;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,10 +35,12 @@ public class lazer : MonoBehaviour
         Bounds hitbox = GetComponent<SpriteRenderer>().bounds;
         if (hitbox.Contains(P.transform.position))
         {
-            //StartCoroutine(hit());
-
             Debug.Log("lazer Hitting player!");
-
+            P.ishot = true;
+        }
+        else
+        {
+            P.ishot = false;
         }
     }
     IEnumerator ignite()

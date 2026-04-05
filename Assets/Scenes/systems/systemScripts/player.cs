@@ -38,7 +38,6 @@ public class player : MonoBehaviour
         {
             //movement
             transform.position += (Vector3)movement * speed * Time.deltaTime;
-            //cope = transform;
         }
 
         //switches between standing and walking animation
