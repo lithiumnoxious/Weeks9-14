@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class player : MonoBehaviour
@@ -20,10 +21,11 @@ public class player : MonoBehaviour
     public bool isdead = false;
 
 
-    //public GameObject bulletE
+    public GameObject bulletE;
 
-    //public float hitDistance = 1.5f;
-    //public UnityEvent entereddanger;
+    public float hitDistance = 1.5f;
+    public UnityEvent entereddanger;
+    public shotgun sg;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +43,10 @@ public class player : MonoBehaviour
             transform.position += (Vector3)movement * speed * Time.deltaTime;
             //cope = transform;
         }
+        else
+        {
+            transform.position = Vector2.zero;
+        }
 
 
         //switches between standing and walking animation
@@ -51,20 +57,27 @@ public class player : MonoBehaviour
 
 
 
+        for (int i = sg.Bucks.Count - 1; i >= 0; i--)
+        {
+            GameObject Buck = sg.Bucks[i];
+            if (Buck != null)
+            {
+                float dist = Vector3.Distance(transform.position, Buck.transform.position);
 
-        //float dist = Vector3.Distance(transform.position, bulletE.transform.position);
+                if (dist <= hitDistance)
+                {
+                    Debug.Log("Hitting player!");
+                    Destroy(Buck);
+                    sg.Bucks.RemoveAt(i);
+                    entereddanger.Invoke();
 
-        //if (dist < hitDistance)
-        //{
-        //    Debug.Log("Hitting player!");
-        //    entereddanger.Invoke();
-
-        //    //Destroy(gameObject);
-        //}
-
-
+                    //    //Destroy(gameObject);
+                    //}
 
 
+                }
+            }
+        }
     }
     public void onMove(InputAction.CallbackContext context)
     {
@@ -126,7 +139,7 @@ public class player : MonoBehaviour
     {
         ishot = true;
         StartCoroutine(stag());
-        yield return new WaitForSecondsRealtime(1);
+        yield return null;
     }
     IEnumerator stag()
     {

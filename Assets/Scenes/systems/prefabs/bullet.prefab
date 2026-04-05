@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7270287898067346677}
   - component: {fileID: 7270287898067346676}
   - component: {fileID: 4982826244224334820}
-  - component: {fileID: 4292923948466005429}
+  - component: {fileID: 8381554144775033591}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7270287898067346679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1982304, y: -2.2456431, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,20 +108,20 @@ MonoBehaviour:
   speed: 4
   timer: 0
   timecap: 5
---- !u!114 &4292923948466005429
+--- !u!114 &8381554144775033591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7270287898067346679}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91e41fbf6baf1ad4299bddcd8720da43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitbox
   p: {fileID: 7596587518203326965, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
-  hitDistance: 1
+  hitDistance: 1.5
   entereddanger:
     m_PersistentCalls:
       m_Calls:
@@ -133,7 +133,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10
+          m_FloatArgument: 5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

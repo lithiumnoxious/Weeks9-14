@@ -5,6 +5,7 @@ public class hitscan : MonoBehaviour
     public player p;
     public GameObject RotP;
     public Vector2 Transform;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
