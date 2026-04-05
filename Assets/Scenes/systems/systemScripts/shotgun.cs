@@ -48,8 +48,9 @@ public class shotgun : MonoBehaviour
             //spawns bullet
             //Quaterion identity is used to make sure the bullet is going up
             //added random range for the shotgun spread.
-
             SpawnedBuck = Instantiate(Buck, transform.position, transform.rotation * Quaternion.Euler(0, 0, -90 + randomZ));
+            //getting references for each one of the bullets
+            //in order to detect if its been hit or not.
             hitbox hb = SpawnedBuck.GetComponentInChildren<hitbox>();
             if (hb != null)
             {

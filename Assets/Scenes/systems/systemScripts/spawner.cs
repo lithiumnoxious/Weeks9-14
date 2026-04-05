@@ -55,7 +55,9 @@ public class spawner : MonoBehaviour
     //spawning the different enemies
     IEnumerator CloneE1()
     {
+        //spawns E1 at a random space
         SpawnedE1 = Instantiate(E1, new Vector2(Random.Range(-6f, 6f),Random.Range(-3.5f, 3.5f)), Quaternion.identity);
+        //get component to get references to player for the enemyguns and shotguns scripts
         Enemyguns rot = SpawnedE1.GetComponentInChildren<Enemyguns>();
         if (rot != null)
         {
@@ -88,13 +90,6 @@ public class spawner : MonoBehaviour
 
         EList.Add(SpawnedE2);
         time2 = 0;
-        yield return null;
-    }
-    IEnumerator iskilled()
-    {
-        
-
-        Debug.Log("hit");
         yield return null;
     }
 }

@@ -15,6 +15,7 @@ public class Enemyguns : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Getting direction to face the player
         Vector2 direction = Ppos.transform.position - transform.position;
         transform.right = direction;
 

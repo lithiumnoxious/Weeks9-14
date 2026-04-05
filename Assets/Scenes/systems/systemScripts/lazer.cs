@@ -40,7 +40,7 @@ public class lazer : MonoBehaviour
             //StartCoroutine(hit());
 
             Debug.Log("lazer Hitting player!");
-;
+
         }
     }
     IEnumerator ignite()
