@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class hitbox : MonoBehaviour
 {
     public player p;
-    public float hitDistance = 1.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +24,5 @@ public class hitbox : MonoBehaviour
             p.hurt(5);
             Destroy(gameObject);
         }
-
     }
 }

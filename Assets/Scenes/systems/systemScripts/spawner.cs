@@ -20,9 +20,6 @@ public class spawner : MonoBehaviour
     //list of both enemy types combined
     public List<GameObject> EList = new List<GameObject>();
 
-    public float hitDistance = 1.5f;
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

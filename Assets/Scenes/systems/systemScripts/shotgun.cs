@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class shotgun : MonoBehaviour
 {
+    public float MaxBuck;
     public SpriteRenderer bsr;
     public GameObject Buck;
     public GameObject SpawnedBuck;
-
 
     public List<GameObject> Bucks = new List<GameObject>();
 
     public float timer;
     public float timecap;
-
-    public float MaxBuck;
 
     public player P;
 
@@ -23,7 +21,6 @@ public class shotgun : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,10 +34,8 @@ public class shotgun : MonoBehaviour
         }
 
     }
-
     IEnumerator shoot()
     {
-
         timer = 0;
         for (int buckshot = 0; buckshot <= MaxBuck; buckshot++)
         {

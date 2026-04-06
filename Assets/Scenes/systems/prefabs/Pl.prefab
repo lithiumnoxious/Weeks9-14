@@ -101,7 +101,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9203210687442014817}
-  - component: {fileID: 7599049183694850526}
   m_Layer: 0
   m_Name: RotP
   m_TagString: Untagged
@@ -125,19 +124,6 @@ Transform:
   - {fileID: 556609595700391892}
   m_Father: {fileID: 1664558217799054340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7599049183694850526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602128430780429898}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc224b82ff5b261438db8c186a164f8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::guns
-  movement: {x: 0, y: 0}
 --- !u!1 &7212980308627116974
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +176,7 @@ MonoBehaviour:
   Bullet: {fileID: 7270287898067346679, guid: fd55d4450364bde489a9f4351bb7b78e, type: 3}
   SpawnedBullet: {fileID: 0}
   Bullets: []
+  Spawner: {fileID: 0}
 --- !u!1 &7596587518203326965
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +295,6 @@ MonoBehaviour:
   PHp: 100
   ishot: 0
   isdead: 0
-  recovery: 10
 --- !u!95 &5169321559212195206
 Animator:
   serializedVersion: 7

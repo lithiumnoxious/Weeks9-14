@@ -20,8 +20,6 @@ public class bulletspawner : MonoBehaviour
     
     public List<GameObject> Bullets = new List<GameObject>();
 
-    public float hitDistance = 1;
-
     public spawner Spawner;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
