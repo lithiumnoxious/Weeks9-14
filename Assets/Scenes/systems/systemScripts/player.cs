@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -20,18 +21,22 @@ public class player : MonoBehaviour
     public bool ishot = false;
     public bool isdead = false;
 
+    public TextMeshProUGUI hp;
+    //public TextMesh death;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
 
         PHp = MaxPHp;
+        //hp.text = PHp + " Hp";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        hp.text = PHp + " Hp";
         if (!ishot)
         {
             //movement

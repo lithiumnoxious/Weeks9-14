@@ -31,7 +31,6 @@ public class lazer : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-
         Bounds hitbox = GetComponent<SpriteRenderer>().bounds;
         if (hitbox.Contains(P.transform.position))
         {
@@ -47,16 +46,18 @@ public class lazer : MonoBehaviour
     {
         timer = 0;
         Currentlength = 0;
+        
         while (Currentlength < Maxlength)
         {
             Currentlength += 3*Time.deltaTime;
             beamtrans.localScale += new Vector3(0,Currentlength,0);
+            beamtrans.localScale = new Vector3(1, 0, 1);
+            
             yield return new WaitForSeconds(0.05f);
         }
         //resets the object to its original postition
         //its like this because only the Y value actually changes
-        beamtrans.localScale = new Vector3(1,0,1);
-       
+        
         yield return null;
     }
 }

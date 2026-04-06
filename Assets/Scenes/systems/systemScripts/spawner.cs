@@ -34,17 +34,19 @@ public class spawner : MonoBehaviour
         if (time1 >= timecap)
         {
             StartCoroutine(CloneE1());
+            //this is so the enemies spawn faster as the game goes on
+            timecap = timecap * 0.99f; 
         }
         if (time2 >= timecap*2.5)
         {
             StartCoroutine(CloneE2());
+            timecap = timecap * 0.99f;
         }
         else
         {
-            time1 += 1 * Time.deltaTime;
-            time2 += 1 * Time.deltaTime;
+            time1 += Time.deltaTime;
+            time2 += Time.deltaTime;
         }
-
     }
     //spawning the different enemies
     IEnumerator CloneE1()
@@ -65,7 +67,6 @@ public class spawner : MonoBehaviour
 
         EList.Add(SpawnedE1);
         time1 = 0;
-        
         yield return null;
     }
     IEnumerator CloneE2()
