@@ -19,8 +19,6 @@ public class player : MonoBehaviour
     public float PHp = 100;
     public bool ishot = false;
     public bool isdead = false;
-    public float recovery = 10;
-    public float c = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -86,20 +84,5 @@ public class player : MonoBehaviour
     {
         PHp = 0;
         isdead = true;
-    }
-
-    public void Beamed()
-    {
-        StartCoroutine(stagger());
-    }
-
-    IEnumerator stagger()
-    {
-        for (int i = 0; i < recovery; i++)
-        {
-            ishot = true;
-        }
-        ishot = false;
-        yield return new WaitForSeconds(0.05f);
     }
 }

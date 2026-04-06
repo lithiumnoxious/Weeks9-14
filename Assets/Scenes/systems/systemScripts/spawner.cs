@@ -1,9 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class spawner : MonoBehaviour
 {
@@ -23,7 +21,6 @@ public class spawner : MonoBehaviour
     public List<GameObject> EList = new List<GameObject>();
 
     public float hitDistance = 1.5f;
-    public UnityEvent entereddanger;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

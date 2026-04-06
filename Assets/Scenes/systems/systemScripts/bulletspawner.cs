@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,6 @@ using UnityEngine.Rendering;
 
 public class bulletspawner : MonoBehaviour
 {
-
     public player p;
     public int MaxAmmo =10;
     public int CurrentAmmo = 10;
@@ -18,9 +18,11 @@ public class bulletspawner : MonoBehaviour
     public GameObject Bullet;
     public GameObject SpawnedBullet;
     
-
     public List<GameObject> Bullets = new List<GameObject>();
 
+    public float hitDistance = 1;
+
+    public spawner Spawner;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,6 +64,11 @@ public class bulletspawner : MonoBehaviour
     {
         //spawns bullet
         SpawnedBullet = Instantiate(Bullet, transform.position, transform.rotation);
+        hitboxP E = SpawnedBullet.GetComponentInChildren<hitboxP>();
+        if (E != null)
+        {
+            E.S = Spawner;
+        }
         Bullets.Add(SpawnedBullet);
         Debug.Log("Current " + CurrentAmmo);
         //if triggered during reloading

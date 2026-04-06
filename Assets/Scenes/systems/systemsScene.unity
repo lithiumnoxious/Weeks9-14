@@ -173,9 +173,6 @@ MonoBehaviour:
   Player: {fileID: 1454272366}
   EList: []
   hitDistance: 1.5
-  entereddanger:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &182668670
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +438,18 @@ PrefabInstance:
     - target: {fileID: 3293797457803357908, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
       propertyPath: entereddanger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: hurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580542130434314071, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
+      propertyPath: S
+      value: 
+      objectReference: {fileID: 36355801}
+    - target: {fileID: 4580542130434314071, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 36355801}
+    - target: {fileID: 4580542130434314071, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
+      propertyPath: SpawnedBullet
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7596587518203326965, guid: 48a5e662065a1344faba279b6fc44e04, type: 3}
       propertyPath: m_Name

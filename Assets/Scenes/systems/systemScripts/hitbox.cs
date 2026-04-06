@@ -16,7 +16,8 @@ public class hitbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float dist = Vector2.Distance(transform.position, p.transform.position);
+        //compares the postitons of the bullet and player
+        //then deals 5 damage if player gets too close
         Bounds hitbox = GetComponent<SpriteRenderer>().bounds;
         if (hitbox.Contains(p.transform.position))
         {
